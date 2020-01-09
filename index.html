@@ -22,6 +22,7 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
  fbq('init', '1710964799040676'); 
 fbq('track', 'PageView');
+fbq('track', 'Purchase');	
 </script>
 <noscript>
  <img height="1" width="1" 
@@ -498,7 +499,11 @@ src="https://www.facebook.com/tr?id=1710964799040676&ev=PageView
     
     
     </footer>
-    
+<script type="text/javascript">
+  $('#$book-now').click(function() {
+    fbq('track', 'Purchase', {currency: "USD", value: 10.00});
+  });
+</script>
 
     <!-- SCRIPTS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
